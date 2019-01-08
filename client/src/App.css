@@ -1,0 +1,116 @@
+.landing {
+  background: url("./img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.landing-inner {
+  padding-top: 5%;
+}
+
+.round-btn {
+  border-radius: 10px;
+  color: white;
+  border-color: white;
+  background-color: #1a1a1a !important;
+}
+
+.round-btn:hover {
+  background-color: white !important;
+  color: #1a1a1a !important;
+  border-color: #1a1a1a !important;
+}
+
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.whiteLink {
+  color: white;
+}
+
+.whiteLink:hover {
+  color: yellow;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 69px;
+}
+
+.space {
+  height: 80px;
+}
+
+.footerHome {
+  background-color: transparent !important;
+}
+
+.btn-big {
+  font-size: 120%;
+}
+
+.img-border {
+  border: 2px solid black !important;
+}
+
+.img-border-top {
+  border-top: none !important;
+}
+
+.rounded-card {
+  border-radius: 5px;
+}
+
+.contact {
+  border: 0 solid black;
+  color: black;
+}
+
+.followButton {
+  margin-left: auto;
+}
+
+input {
+  background-color: #eceeef !important;
+}
+
+textarea {
+  background-color: #eceeef !important;
+  resize: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .responsive-btn {
+    padding: 20px 24px !important;
+  }
+
+  .responsive-img {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .footer {
+    visibility: hidden;
+  }
+}
+
+.dark {
+  color: black;
+}
+
+@media only screen and (max-width: 991px) {
+  .followButton {
+    margin-left: 0px !important;
+  }
+}
