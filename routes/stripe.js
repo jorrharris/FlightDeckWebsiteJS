@@ -5,9 +5,6 @@ const stripe = require("stripe")(keys.stripeSK);
 
 router.post("/charge", (req, res) => {
   let amount = req.body.amount;
-  console.log("in server: ");
-  console.log(req.body);
-
   stripe.customers
     .create({
       email: req.body.email,

@@ -20,6 +20,28 @@ class TakeMoney extends React.Component {
     axios
       .post("/stripe/charge", data)
       .then(response => {
+        const array = response.config.data.split(",");
+        //"email":"abc@gmail.com"
+        const newArray = array.filter(item => {
+          return item.startsWith('"email"');
+        });
+        const newNewArray = newArray[0].split(":");
+        const emailString = newNewArray[1].replace(/"/g, "");
+        //post data to /api/send-mail
+        const emailData = {
+          name: "Unknown",
+          email: emailString,
+          subject: `Donation`,
+          text: `You have recieved a Stripe donation of $${this.numberWithCommas(
+            this.state.displayAmount.toFixed(2)
+          )}`
+        };
+
+        axios
+          .post("/api/send-mail", emailData)
+          .then(response => {})
+          .catch(err => {});
+
         this.props.history.push("/donation-success");
       })
       .catch(err => this.props.history.push("/donation-error"));
@@ -89,6 +111,11 @@ class TakeMoney extends React.Component {
                 onChange={this.onChange}
                 required
               />
+              <div className="input-group-append">
+                <span className="input-group-text">
+                  <i className="fab fa-stripe" />
+                </span>
+              </div>
             </div>
           </div>
         </div>

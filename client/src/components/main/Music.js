@@ -25,7 +25,6 @@ class Music extends Component {
     let musicContent;
 
     if (this.state.loading) {
-      console.log("in here");
       musicContent = <Spinner />;
     } else {
       musicContent = this.state.music.map((album, index) => {
@@ -70,7 +69,7 @@ class Music extends Component {
               rel="noopener noreferrer"
               className="btn btn-lg round-btn btn-outline-secondary mr-3 responsive-btn my-auto btn-big"
             >
-              <i className="fa fa-spotify mr-1" />
+              <i className="fab fa-spotify mr-1" />
               Spotify
             </a>
           </div>
@@ -81,7 +80,7 @@ class Music extends Component {
               rel="noopener noreferrer"
               className="btn btn-lg round-btn btn-outline-secondary mr-3 responsive-btn btn-big"
             >
-              <i className="fa fa-apple mr-1" />
+              <i className="fab fa-apple mr-1" />
               Apple Music
             </a>
           </div>
@@ -92,7 +91,7 @@ class Music extends Component {
               rel="noopener noreferrer"
               className="btn btn-lg round-btn btn-outline-secondary mr-3 responsive-btn btn-big"
             >
-              <i className="fa fa-google mr-1" />
+              <i className="fab fa-google mr-1" />
               Google Play
             </a>
           </div>
@@ -103,7 +102,7 @@ class Music extends Component {
               href="https://www.youtube.com/channel/UCEzP0rxE3rPN9dgwpIL64ag"
               className="btn btn-lg round-btn btn-outline-secondary mr-3 responsive-btn btn-big"
             >
-              <i className="fa fa-youtube mr-1" />
+              <i className="fab fa-youtube mr-1" />
               YouTube
             </a>
           </div>
