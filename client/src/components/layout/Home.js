@@ -37,6 +37,28 @@ class Home extends Component {
                 >
                   Merch
                 </a>
+                <br />
+                <a
+                  href="https://www.instagram.com/flightdeckofficial/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-instagram frontIcon" />
+                </a>
+                <a
+                  href="https://twitter.com/Flightdeckbnd"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-twitter frontIcon" />
+                </a>
+                <a
+                  href="https://www.facebook.com/flightdeckofficial/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fab fa-facebook frontIcon" />
+                </a>
               </div>
             </div>
           </div>
